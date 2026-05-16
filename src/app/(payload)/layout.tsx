@@ -1,13 +1,10 @@
 import React from 'react'
+import '@payloadcms/next/css'
 
-export const metadata = {
-  title: 'Payload Admin',
+type Args = {
+  children: React.ReactNode
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="de">
-      <body>{children}</body>
-    </html>
-  )
-}
+const Layout = ({ children }: Args) => children
+
+export default Layout
