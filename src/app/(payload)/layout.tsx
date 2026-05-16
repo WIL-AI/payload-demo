@@ -5,6 +5,10 @@ type Args = {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Args) => children
-
-export default Layout
+export default function RootLayout({ children }: Args) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  )
+}
